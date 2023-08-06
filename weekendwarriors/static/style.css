@@ -1,0 +1,176 @@
+.nav-item {
+    width: 20%;
+    font-size: 1em;
+}
+
+.bodycontent {
+    padding: 1% 3%;
+    min-height: 800px;
+    background-color: #d2fdfe;
+}
+
+#navbar {
+    text-align: center;
+    background-color: #00292a;
+    color: #a2fcfd;
+}
+
+#navbar a {
+    color: #a2fcfd;
+}
+
+#navbar a:hover {
+    color: yellow;
+    background-color: #00292a;
+    text-decoration: none;
+}
+
+#wwfc {
+    font-size: 2em;
+    text-align: left;
+    padding: 1% 0% 0% 1%;
+    width: 50%;
+}
+
+#wwfc a {
+    color: #a2fcfd;
+}
+
+#user {
+    font-size: 1em;
+    text-align: right;
+    padding: 2% 8% 0% 0%;
+    width: 50%;
+    color: #a2fcfd;
+}
+
+#footer {
+    text-align: center;
+    background-color: #00292a;
+    color: #a2fcfd;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.footlinks {
+    padding: 0 1%;
+    color: #a2fcfd;
+}
+
+.mytable {
+    padding-left: 1%;
+    padding-right: 1%;
+    text-align: center;
+}
+
+.img-content {
+    text-align: center;
+    color: #a2fcfd;
+    padding: 5% 0;
+}
+
+.anti-img-content {
+    text-align: center;
+    color: black;
+}
+
+.anti-img-left {
+    text-align: left;
+    color: black;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.container-member {
+    position: relative;
+    text-align: center;
+    color: black;
+    margin: auto;
+}
+
+.login-container {
+    text-align: left;
+    color: black;
+}
+
+.logreg {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    border-radius: 50%;
+}
+
+.right-container {
+    text-align: right;
+    color: black;
+    padding-right: 10%;
+}
+
+hr {
+    border-top: 1px solid;
+    width: 70%;
+}
+
+.mid-content1 {
+    text-align: center;
+}
+
+.mid-content2 {
+    text-align: center;
+    margin: auto;
+}
+
+.mycard {
+    margin: 1% 0;
+    text-align: center;
+    font-weight: bold;
+}
+
+.card-cust {
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+}
+
+.card-img-cust {
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+}
+
+.blog-meta {
+    font-size: 0.8em;
+}
+
+.img-left {
+    float: left;
+    width: 25%;
+}
+
+.img-right {
+    float: right;
+    width: 40%;
+}
+
+.title {
+    font-size: 4vw;
+}
+
+.subtitle {
+    font-size: 2vw;
+}
+
+#wwfcheaderlogo {
+    width: 10%;
+    margin: 0 4% 0 0;
+}
+
+#wwfloginlogo {
+    width: 30%;
+    margin: 0 0 0 0;
+}
