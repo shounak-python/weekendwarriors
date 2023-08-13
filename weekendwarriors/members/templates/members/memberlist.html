@@ -1,6 +1,7 @@
 {% include 'home/header.html' %} 
 {% include 'home/messages.html' %} 
 {%block memberlist%} 
+{% load static %}
 {% if user.is_authenticated %}
 
 
@@ -13,22 +14,48 @@
 			<div
 				class="card card-cust"
 				style="width: 18rem; margin: auto;">
+
+				<div class="container-member-image">
 				<img
 					src= {{member.image.url}}
 					class="card-img-top card-img-cust"
-					alt="..." />
-					
-				<div class="card-body">
+					alt="Image of {{member.first_name}} {{member.last_name}}" />
+
+					{% if member.preferred_foot|cut:" " == "Left" %}
+					<div class="top-left" style="color: black;">
+						<img class="foot-img" src="{% static './img/left.png' %}">
+						<br>
+						{{member.preferred_foot}}
+					</div>
+					<div class="top-right squad-number" style="color: black;">
+						{{member.number}}
+					</div>
+					{% else %}
+					<div class="top-right" style="color: black;">
+						<img class="foot-img" src="{% static './img/right.png' %}">
+						<br>
+						{{member.preferred_foot}}
+					</div>
+					<div class="top-left squad-number" style="color: black;">
+						{{member.number}}
+					</div>
+					{% endif %}
+				</div>
+				<div class="card-body card-body2">
+					{{member.football_proficiency}}
 					<h5 class="card-title">
 						{{member.first_name}} {{member.last_name}}
-					</h5>
-					<h6 class="card-subtitle mb-2 text-muted">
-						{{member.preferred_field_position}} {{member.image.url}}
-					</h6>
+					</h5>					
 					<ul class="list-group list-group-flush">
-						<li class="list-group-item"></li>
-						<li class="list-group-item"></li>
-						<li class="list-group-item"></li>
+						<li class="list-group-item card-list">
+							<span style="font-size: 0.8em;">Preferred Role: </span> <strong>{{member.preferred_field_position}}</strong>
+							<br>
+							<span style="font-size: 0.8em;">Secondary Role: </span> <strong class="text-muted">{{member.secondary_field_position}}</strong>
+						</li>
+						<li class="list-group-item card-list">
+							<span style="font-size: 0.8em;">Favorite Club: </span><strong>{{member.favorite_club}}</strong><br>
+							<span style="font-size: 0.8em;">Favorite Player: </span><strong>{{member.favorite_player}}</strong>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -49,20 +76,48 @@
 			<div
 				class="card card-cust"
 				style="width: 18rem; margin: auto;">
+
+				<div class="container-member-image">
 				<img
-					src= "{{member.image.url}}"
+					src= {{member.image.url}}
 					class="card-img-top card-img-cust"
-					alt="..." />
-					
-				<div class="card-body">
-					<h5 class="card-title">{{member.first_name}} {{member.last_name}}</h5>
-					<h6 class="card-subtitle mb-2 text-muted">
-						{{member.preferred_field_position}}
-					</h6>
+					alt="Image of {{member.first_name}} {{member.last_name}}" />
+
+					{% if member.preferred_foot|cut:" " == "Left" %}
+					<div class="top-left" style="color: black;">
+						<img class="foot-img" src="{% static './img/left.png' %}">
+						<br>
+						{{member.preferred_foot}}
+					</div>
+					<div class="top-right squad-number" style="color: black;">
+						{{member.number}}
+					</div>
+					{% else %}
+					<div class="top-right" style="color: black;">
+						<img class="foot-img" src="{% static './img/right.png' %}">
+						<br>
+						{{member.preferred_foot}}
+					</div>
+					<div class="top-left squad-number" style="color: black;">
+						{{member.number}}
+					</div>
+					{% endif %}
+				</div>
+				<div class="card-body card-body2">
+					{{member.football_proficiency}}
+					<h5 class="card-title">
+						{{member.first_name}} {{member.last_name}}
+					</h5>					
 					<ul class="list-group list-group-flush">
-						<li class="list-group-item"></li>
-						<li class="list-group-item"></li>
-						<li class="list-group-item"></li>
+						<li class="list-group-item card-list">
+							<span style="font-size: 0.8em;">Preferred Role: </span> <strong>{{member.preferred_field_position}}</strong>
+							<br>
+							<span style="font-size: 0.8em;">Secondary Role: </span> <strong class="text-muted">{{member.secondary_field_position}}</strong>
+						</li>
+						<li class="list-group-item card-list">
+							<span style="font-size: 0.8em;">Favorite Club: </span><strong>{{member.favorite_club}}</strong><br>
+							<span style="font-size: 0.8em;">Favorite Player: </span><strong>{{member.favorite_player}}</strong>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -83,20 +138,48 @@
 			<div
 				class="card card-cust"
 				style="width: 18rem; margin: auto;">
+
+				<div class="container-member-image">
 				<img
-					src= "{{member.image.url}}"
+					src= {{member.image.url}}
 					class="card-img-top card-img-cust"
-					alt="..." />
-					
-				<div class="card-body">
-					<h5 class="card-title">{{member.first_name}} {{member.last_name}}</h5>
-					<h6 class="card-subtitle mb-2 text-muted">
-						{{member.preferred_field_position}}
-					</h6>
+					alt="Image of {{member.first_name}} {{member.last_name}}" />
+
+					{% if member.preferred_foot|cut:" " == "Left" %}
+					<div class="top-left" style="color: black;">
+						<img class="foot-img" src="{% static './img/left.png' %}">
+						<br>
+						{{member.preferred_foot}}
+					</div>
+					<div class="top-right squad-number" style="color: black;">
+						{{member.number}}
+					</div>
+					{% else %}
+					<div class="top-right" style="color: black;">
+						<img class="foot-img" src="{% static './img/right.png' %}">
+						<br>
+						{{member.preferred_foot}}
+					</div>
+					<div class="top-left squad-number" style="color: black;">
+						{{member.number}}
+					</div>
+					{% endif %}
+				</div>
+				<div class="card-body card-body2">
+					{{member.football_proficiency}}
+					<h5 class="card-title">
+						{{member.first_name}} {{member.last_name}}
+					</h5>					
 					<ul class="list-group list-group-flush">
-						<li class="list-group-item"></li>
-						<li class="list-group-item"></li>
-						<li class="list-group-item"></li>
+						<li class="list-group-item card-list">
+							<span style="font-size: 0.8em;">Preferred Role: </span> <strong>{{member.preferred_field_position}}</strong>
+							<br>
+							<span style="font-size: 0.8em;">Secondary Role: </span> <strong class="text-muted">{{member.secondary_field_position}}</strong>
+						</li>
+						<li class="list-group-item card-list">
+							<span style="font-size: 0.8em;">Favorite Club: </span><strong>{{member.favorite_club}}</strong><br>
+							<span style="font-size: 0.8em;">Favorite Player: </span><strong>{{member.favorite_player}}</strong>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -117,20 +200,48 @@
 			<div
 				class="card card-cust"
 				style="width: 18rem; margin: auto;">
+
+				<div class="container-member-image">
 				<img
-					src= "{{member.image.url}}"
+					src= {{member.image.url}}
 					class="card-img-top card-img-cust"
-					alt="..." />
-					
-				<div class="card-body">
-					<h5 class="card-title">{{member.first_name}} {{member.last_name}}</h5>
-					<h6 class="card-subtitle mb-2 text-muted">
-						{{member.preferred_field_position}}
-					</h6>
+					alt="Image of {{member.first_name}} {{member.last_name}}" />
+
+					{% if member.preferred_foot|cut:" " == "Left" %}
+					<div class="top-left" style="color: black;">
+						<img class="foot-img" src="{% static './img/left.png' %}">
+						<br>
+						{{member.preferred_foot}}
+					</div>
+					<div class="top-right squad-number" style="color: black;">
+						{{member.number}}
+					</div>
+					{% else %}
+					<div class="top-right" style="color: black;">
+						<img class="foot-img" src="{% static './img/right.png' %}">
+						<br>
+						{{member.preferred_foot}}
+					</div>
+					<div class="top-left squad-number" style="color: black;">
+						{{member.number}}
+					</div>
+					{% endif %}
+				</div>
+				<div class="card-body card-body2">
+					{{member.football_proficiency}}
+					<h5 class="card-title">
+						{{member.first_name}} {{member.last_name}}
+					</h5>					
 					<ul class="list-group list-group-flush">
-						<li class="list-group-item"></li>
-						<li class="list-group-item"></li>
-						<li class="list-group-item"></li>
+						<li class="list-group-item card-list">
+							<span style="font-size: 0.8em;">Preferred Role: </span> <strong>{{member.preferred_field_position}}</strong>
+							<br>
+							<span style="font-size: 0.8em;">Secondary Role: </span> <strong class="text-muted">{{member.secondary_field_position}}</strong>
+						</li>
+						<li class="list-group-item card-list">
+							<span style="font-size: 0.8em;">Favorite Club: </span><strong>{{member.favorite_club}}</strong><br>
+							<span style="font-size: 0.8em;">Favorite Player: </span><strong>{{member.favorite_player}}</strong>
+						</li>
 					</ul>
 				</div>
 			</div>

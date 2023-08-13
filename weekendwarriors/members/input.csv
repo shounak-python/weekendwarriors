@@ -1,0 +1,18 @@
+first_name,last_name,image,number,favorite_club,favorite_player,preferred_foot,preferred_field_position,secondary_field_position,football_proficiency
+David,Beckham,upload/beckham.png,7,Manchester United,David Beckham,Right,Midfielder,Attacker,????
+Gianluigi,Buffon,upload/buffon.png,1,Juventus,Gianluigi Buffon,Right,Goalkeeper,Defender,?????
+ ,Cafu,upload/cafu.png,2,AC Milan,Cafu,Right,Defender,Midfielder,????
+Iker,Casillas,upload/casillas.png,1,Real Madrid,Iker Casillas,Left,Goalkeeper,Defender,????
+Rio,Ferdinand,upload/ferdinand.png,5,Manchester United,Rio Ferdinand,Right,Defender,Attacker,????
+Steven,Gerrard,upload/gerrard.png,8,Liverpool,Steven Gerrard,Right,Midfielder,Defender,?????
+Fernando,Hierro,upload/hierro.png,4,Real Madrid,Fernando Hierro,Right,Defender,Attacker,????
+Roy,Keane,upload/keane.png,16,Manchester United,Roy Keane,Right,Midfielder,Defender,???
+Paolo,Maldini,upload/maldini.png,3,AC Milan,Paolo Maldini,Left,Defender,Midfielder,????
+Alessandro,Nesta,upload/nesta.png,13,AC Milan,Alessandro Nesta,Right,Defender,Midfielder,????
+Robert,Pires,upload/pires.png,7,Arsenal,Robert Pires,Left,Midfielder,Attacker,??
+Shounak,Deshpande,upload/deshpande.png,10,Manchester United,Shounak Deshpande,Right,Midfielder,Attacker,??
+Roberto,Carlos,upload/robertocarlos.png,3,Real Madrid,Roberto Carlos,Left,Defender,Attacker,???
+Luiz,Ronaldo,upload/ronaldo.png,9,Real Madrid,Luiz Ronaldo,Right,Attacker,Midfielder,????
+Wayne,Rooney,upload/rooney.png,10,Everton,Wayne Rooney,Right,Attacker,Midfielder,????
+Hernandez,Xavi,upload/xavi.png,6,Barcelona,Hernandez Xavi,Right,Midfielder,Attacker,?????
+Zinedine,Zidane,upload/zidane.png,5,Real Madrid,Zinedine Zidane,Right,Midfielder,Attacker,?????

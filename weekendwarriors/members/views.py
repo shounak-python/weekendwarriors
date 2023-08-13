@@ -1,6 +1,5 @@
 from django.shortcuts import render
-from django.urls import reverse_lazy
-from members.models import Member, Foot, Proficiency, FieldPosition
+from members.models import Member, FieldPosition
 
 # Create your views here.
 def memberlist(request):

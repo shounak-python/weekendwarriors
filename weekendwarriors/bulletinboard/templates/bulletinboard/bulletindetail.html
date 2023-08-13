@@ -1,0 +1,33 @@
+{% include 'home/header.html' %} 
+{% include 'home/messages.html' %} 
+{%block memberlist%} 
+{% load static %}
+{% if user.is_authenticated %}
+
+<div class="container title" style="color: #00292a; font-weight: bold;"> {{bulletin.title}} </div>
+<div class="article">
+
+<div>
+	Created on: <strong>{{bulletin.created_on}}</strong> ⬅️ | ➡️	Updated on: <strong>{{bulletin.updated_on}}</strong>
+</div>
+
+<div class="subtitle">
+	<strong>
+		{{bulletin.subtitle}}
+	</strong>
+</div>
+<img class="article-detail-img" src="{{bulletin.image.url}}">
+
+<div class="article-content">
+	{{bulletin.content|linebreaks }}
+</div>
+
+<div class="article-author">
+	-Admin
+</div>
+
+</div>
+
+{% else %} This page is accessible only to Members. Please Login First. {% endif %} 
+{%endblock%} 
+{% include 'home/footer.html' %}

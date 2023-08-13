@@ -1,0 +1,53 @@
+{% include 'home/header.html' %} 
+{% include 'home/messages.html' %} 
+{%block memberlist%} 
+{% load static %}
+{% if user.is_authenticated %}
+
+<div class="container title" style="color: #00292a;"> BULLETIN BOARD</div>
+<div>
+	
+{% if bulletin_query %}
+<div class="row">
+	{% for post in bulletin_query %}
+	<div class="col-md-4 col-sm-6" style="padding: 0; margin: auto;">
+		<div
+			class="card card-cust"
+			style="width: 18rem; margin: auto; padding: 3%;">
+			<div class="container-member-image">
+			<img
+				src= {{post.image.url}}
+				class="card-img-top card-img-cust"
+				alt="{{post.title}}" />
+
+				<div class="top-left bulletin-number" style="color: black;">
+					{{ forloop.counter }}
+				</div>
+			</div>
+			<div class="card-body card-body2">
+				<h5 class="card-title">
+					{{post.title}}
+				</h5>					
+				<ul class="list-group list-group-flush">
+					<li class="list-group-item card-list">
+						<strong>{{post.subtitle|truncatechars:30}}</strong>
+						<br>
+						<p class="text-muted">{{post.content|truncatechars:50}}</p>
+					</li>
+				</ul>
+			</div>
+			<a href="{%url 'bulletinboard:bulletindetail' post.pk%}" class="btn btn-primary">Read full bulletin</a>
+		</div>
+	</div>
+	{% endfor %}
+</div>
+
+
+{% else %}
+No posts yet.
+{% endif %}
+</div>
+
+{% else %} This page is accessible only to Members. Please Login First. {% endif %} 
+{%endblock%} 
+{% include 'home/footer.html' %}

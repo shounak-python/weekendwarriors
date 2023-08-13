@@ -51,12 +51,15 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    text-align: center;
 }
 
 .footlinks {
     padding: 0 1%;
     color: #a2fcfd;
+}
+
+.card-list {
+    padding: 0;
 }
 
 .mytable {
@@ -134,13 +137,24 @@ hr {
 }
 
 .card-cust {
-    border-top-right-radius: 5%;
-    border-top-left-radius: 5%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.card-body2 {
+    padding: 0%;
+}
+
+.article {
+    width: 70%;
+    text-align: center;
+    margin: auto;
 }
 
 .card-img-cust {
-    border-top-right-radius: 5%;
-    border-top-left-radius: 5%;
+    width: 70%;
 }
 
 .blog-meta {
@@ -157,12 +171,67 @@ hr {
     width: 40%;
 }
 
+.article-detail-img {
+    width: 70%;
+}
+
+.article-content {
+    margin: 2% 10% ;
+    text-align: justify;
+}
+
+.article-author {
+    text-align: right;
+    font-size: 2.5em;
+}
+
 .title {
     font-size: 4vw;
 }
 
 .subtitle {
     font-size: 2vw;
+}
+
+.container-member-image{
+    position: relative;
+    text-align: center;
+}
+
+.bottom-left {
+    position: absolute;
+    bottom: 1%;
+    left: 1%;
+    right: 1%;
+  }
+
+.top-right {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+  }
+
+.foot-img {
+    width: 40%;
+    margin: 10% 5%;
+}
+
+.top-left {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+  }
+
+.squad-number {
+    font-size: 3.3em;
+    padding: 0% 5%;
+    font-weight: bolder;
+}
+
+.bulletin-number {
+    font-size: 2em;
+    padding: 0% 3%;
+    font-weight: bolder;
 }
 
 #wwfcheaderlogo {
