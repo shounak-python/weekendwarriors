@@ -251,6 +251,59 @@
 	</div>
 </div>
 
+<div style="background: #00292a;">
+	<div class="title" style="color: white; text-align: center;">Weekly Attendance <span class="subtitle">(values are in ₹)</span></div>
+
+	<table class="table table-hover table-bordered table-light table-responsive table-block">
+		<thead>
+		  <tr>
+			<th scope="col">#</th>
+			{% for header in headers %}
+			<th scope="col">{{header|title}}</th>
+			{% endfor %}
+		  </tr>
+		</thead>
+		<tbody>
+			{% for row in attendance_rows %}
+		  <tr>
+			<th scope="row">{{ forloop.counter }}</th>
+			{% for value in row %}
+			{% if value < 0 %}
+			<td style="color: red;">{{value}}</td>
+			{% else %}
+			<td>{{value}}</td>
+			{% endif %}
+			{% endfor %}
+		  </tr>
+		  {% endfor %}
+		</tbody>
+	</table>
+</div>
+
+<div style="background: #00292a;">
+	<div class="title" style="color: white; text-align: center;">Current Balance <span class="subtitle">(as on {{balance_date}}, values are in ₹)</span></div>
+
+	<table class="table table-hover table-bordered table-light table-responsive table-block">
+		<thead>
+		  <tr>
+			{% for name in balance_names %}
+			<th scope="col">{{name|title}}</th>
+			{% endfor %}
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			{% for value in balance_values %}
+			{% if value < 0 %}
+			<td style="color: red;">{{value}}</td>
+			{% else %}
+			<td>{{value}}</td>
+			{% endif %}
+			{% endfor %}
+		  </tr>
+		</tbody>
+	</table>
+</div>
 
 {% else %} This page is accessible only to Members. Please Login First. {% endif %} 
 {%endblock%} 
