@@ -14,7 +14,7 @@ class MemberAdmin(admin.ModelAdmin):
 
 class AttendanceAdmin(admin.ModelAdmin):
     list_display = (
-        "date",
+        "Date",
         "Nikhil_Kadukar",
         "Rajesh_Sharma",
         "Omkar_Panda",
@@ -53,7 +53,7 @@ class AttendanceAdmin(admin.ModelAdmin):
 
 class BalanceAdmin(admin.ModelAdmin):
     list_display = (
-        "date",
+        "Date",
         "Nikhil_Kadukar",
         "Rajesh_Sharma",
         "Omkar_Panda",

@@ -28,7 +28,7 @@ def current_balance():
     balance_df = balance_df[balance_df.columns[1:]]
     current_balance = balance_df.iloc[0].to_dict()
     with open("members/current_balance.json", "w") as json_file:
-        json.dump({str(date.today()): current_balance}, json_file)
+        json.dump({str(Date.today()): current_balance}, json_file)
     return current_balance
 
 
@@ -50,7 +50,7 @@ def populate_attendance():
     df["Date"] = pd.to_datetime(df["Date"])
     for index, row in df.iterrows():
         att = Attendance(
-            date=str(row["Date"]).split(" ")[0],
+            Date=str(row["Date"]).split(" ")[0],
             Nikhil_Kadukar=row["Nikhil_Kadukar"],
             Rajesh_Sharma=row["Rajesh_Sharma"],
             Omkar_Panda=row["Omkar_Panda"],
@@ -94,7 +94,7 @@ def populate_balance():
 
     for key, val in current_balance.items():
         bal = Balance(
-            date=key,
+            Date=key,
             Nikhil_Kadukar=val["Nikhil_Kadukar"],
             Rajesh_Sharma=val["Rajesh_Sharma"],
             Omkar_Panda=val["Omkar_Panda"],
