@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "home.apps.HomeConfig",
     "members.apps.MembersConfig",
+    "blogs.apps.BlogsConfig",
     "bulletinboard.apps.BulletinboardConfig",
     "crispy_forms",
     "django_extensions",

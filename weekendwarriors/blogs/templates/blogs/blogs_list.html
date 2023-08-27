@@ -1,0 +1,32 @@
+{% include 'home/header.html' %} {% include 'home/messages.html' %} {%block blogs_list%} {% if user.is_authenticated %} {% load static %} 
+
+<div class="container title" style="color: #00292a;">BLOGS</div>
+
+  <div class="anti-img-left">
+      <a class="btn btn-primary" href="{%url 'blogs:blogs_create'%}"  style="float:center;" role="button">Add Blog ✍️</a>
+  </div>
+<div class="left-container py-5" style="padding-top:10%;">
+<p class="subtitle">Blog-List</p>
+
+{%if blogs_list%}
+<ol>
+{%for blog in blogs_list%}
+<li>
+    <a href="{%url 'blogs:blogs_detail' blog.id%}"><strong>{{blog.title}}</strong></a>&nbsp;&nbsp; <span class="blog-meta" style="font-style: italic;">by {{blog.author}}</span>
+    <p class="blog-meta">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - last updated {{blog.updated_at}}
+    {% if blog.author == user %}
+        (
+            <a href="{%url 'blogs:blogs_update' blog.id%}">update</a> | 
+            <a href="{%url 'blogs:blogs_delete' blog.id%}">delete</a>
+        )
+    {%endif%}</p>
+</li> <hr align="left" style="width:30%; border-top: 1px dotted">
+{%endfor%}
+</ol>
+{%else%}
+<p>There are no blogs to read.</p>
+{%endif%}
+</div>
+
+
+{% else %} Please Login First {% endif %} {%endblock%} {% include 'home/footer.html' %}

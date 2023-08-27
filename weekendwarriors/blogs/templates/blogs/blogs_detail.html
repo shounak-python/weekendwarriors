@@ -1,0 +1,21 @@
+{% include 'home/header.html' %} {% include 'home/messages.html' %} {%block blogdetail%} {% if user.is_authenticated %} {% load static %} 
+
+<a class="btn btn-light btn-outline-primary btn-lg" href="{% url 'blogs:blogs_list' %}" role="button">🔙</a>
+<div class="container title" style="color: #00292a; font-weight: bold;">{{blogs.title}}</div>
+<div class="article">
+    <p>
+    Author: <strong>{{blogs.author|capfirst }}</strong> 
+    {% if blogs.author == user %}(
+        <a href="{%url 'blogs:blogs_update' blogs.id%}">update</a> | 
+        <a href="{%url 'blogs:blogs_delete' blogs.id%}">delete</a>
+    )
+{%endif%}
+    |
+	Created on: <strong>{{blogs.created_at}}</strong> ⬅️ | ➡️	Updated on: <strong>{{blogs.updated_at}}</strong>
+    </p>
+    <div class="article-content">
+        {{blogs.content|linebreaks }}
+    </div>
+</div>
+
+{% else %} Please Login First {% endif %} {%endblock%} {% include 'home/footer.html' %}

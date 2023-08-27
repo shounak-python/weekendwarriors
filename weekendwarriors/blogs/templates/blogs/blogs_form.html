@@ -1,0 +1,15 @@
+{% include 'home/header.html' %} {% include 'home/messages.html' %} {% load crispy_forms_tags %} {%block blog_form%} {% if user.is_authenticated %} {% load static %} 
+
+<a class="btn btn-light btn-lg" href="{% url 'blogs:blogs_list' %}" role="button">🔙</a>
+<div class="container title" style="color: #00292a;">Write/Edit Your Blog</div>
+
+<p style="text-align:center;">
+        <form action="" method="POST">
+        {% csrf_token %}
+        {{form|crispy}}
+        <input type='submit' class="btn btn-primary btn-sm" value="Submit">
+        <input type='reset' class="btn btn-secondary btn-sm" value="Reset">
+        </form>
+</p>
+
+{% else %} Please Login First {% endif %} {%endblock%} {% include 'home/footer.html' %}
