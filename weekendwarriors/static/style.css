@@ -162,7 +162,8 @@ hr {
 }
 
 .card-img-cust {
-    width: 70%;
+    width: 50%;
+    border-radius: 10%;
 }
 
 .blog-meta {

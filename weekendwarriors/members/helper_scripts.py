@@ -8,6 +8,19 @@ import pandas as pd
 import json
 from datetime import date
 from members.models import Attendance, Balance, Club, Player, Foot, FieldPosition, Proficiency, Member
+import cv2
+import os
+src = "./members/player_img/"
+dst = "./members/player_img_processed/"
+img_list = os.listdir(src)
+
+
+def resize_img():
+    global src,dst,img_list
+    for file in img_list:
+        img=cv2.imread(f"{src}{file}")
+        file = ".".join(file.split(".")[:-1])
+        cv2.imwrite(f"{dst}{file}.jpg", cv2.resize(img, (200, 200)))
 
 
 def current_balance():
